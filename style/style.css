@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+
 body{
     font-family: "Mulish", sans-serif;
 }
@@ -9,6 +10,7 @@ body{
 .Container{
     width: 90%;
     margin: 5rem auto;
+    border-radius: 1rem;
 }
 h3{
     color: ;
@@ -102,7 +104,7 @@ input, select{
     border-radius: 8px;
     border: none;
     cursor: pointer;
-    font size: 16px;
+    font-size: 16px;
 }
 .btn-primary{
     width: 175px;
@@ -116,5 +118,150 @@ input, select{
     color:white;
     border: rgb(255, 84, 0);
     border-radius: 8px;
+    font-weight:800;
 
+}
+/* populer section */
+.popular-section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top:3rem;
+    gap:3rem;
+}
+
+.popular-section img{
+    width: 100%;
+    height: 100%;
+}
+.text-conatnt{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    justify-content: space-between;
+}
+
+.text-conatnt p, 
+.text-conatnt li{
+    font-size: 16px;
+    line-height: 24px;
+    word-spacing: 5px;
+    letter-spacing: 1px;
+}
+
+.text-conatnt p, 
+.text-conatnt li,
+.text-conatnt h3{
+    text-align: left;
+}
+
+
+/* your dastination */
+
+.your-destanition img{
+    width: 100%;
+    height: 300px;
+    filter: brightness(70%);
+}
+.row-1, 
+.row-2, 
+.row-3{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 1px 0;
+    gap: 1rem;
+}
+
+.row-2{
+    grid-template-columns: 0.8fr 1.5fr 0.7fr;
+}
+.row-3{
+    grid-template-columns: 0.75fr 1.25fr;
+}
+.country-card{
+    position: relative;
+}
+.country{
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    transform: translate(-50%, -50%);
+}
+
+/* footer section */
+
+.footer-section{
+    background: rgba(19, 19, 24, 0.05);
+    padding: 2rem 0;
+}
+
+.footer-section, .Logo{
+   margin: 2rem auto; 
+
+}
+
+.social{
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem auto;
+
+}
+.social i{
+    width: 44px;
+    font-size: 24px;
+
+}
+.footer-section hr{
+    margin: 2rem 0;
+}
+.hams-burger{
+    display: none;
+}
+
+
+        /* Responsive for phone tab and desktop */
+@media screen and (max-width:576px) {
+    .nav-option{
+        display: none;
+    }
+    .hams-burger{
+        display: block;
+    }
+    h3{
+        font-size: 26px;
+    }
+    .hams-burger i{
+        font-size: 26px;
+    }
+    .Container{
+        margin: 3rem auto;
+    }
+    p{
+        font-size: 16px;
+    }
+    .Explore-container h3{
+        font-size: 26px;
+    }
+     .Explore-container p{
+        width: 60%;
+     }
+
+     .traval-input{
+        flex-direction: column;
+        width: 70%;
+        margin: auto;
+     } 
+     .traval-input input,
+     .traval-input select,
+     .traval-input button{
+        width: 100%;
+        margin: 1rem 0;
+     }
+     .popular-section, .row-1, .row-2, .row-3{
+        grid-template-columns: 1fr;
+    }
 }
